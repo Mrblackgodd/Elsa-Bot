@@ -1,0 +1,7 @@
+services:
+  - name: telegram-bot
+    env:
+      - key: TELEGRAM_TOKEN
+        from_secret: telegram-token
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
